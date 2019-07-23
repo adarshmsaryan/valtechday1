@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 2px solid green;
+        }
+    </style>
+    <script>
+        var box=0;
+         document.addEventListener("DOMContentLoaded",function(){
+             var can=document.getElementsByTagName("canvas")[0];
+             var ctx=can.getContext("2d");
+           // ctx.font="bold 44px Arial";
+           // ctx.scale(0.5,2);//width height multipler
+           // ctx.rotate((Math.PI/180)*90);//value must be in radius
+           //  ctx.translate(10,100);//left and top offset
+             //ctx.fillText("valtech",0,0);
+             //ctx.scale(0.5,2);//width height multipler
+             //ctx.fillText("hello",185,0);
+            // var img=new Image();
+            // img.src="rajani.jpg";
+            // img.addEventListener("load",function(evt){
+            //     ctx.drawImage(evt.target,100,100);
+           //  })
+          // ctx.moveTo(100,150);
+          // ctx.lineTo(200,100);
+          // ctx.lineTo(100,200);
+          // ctx.lineTo(200,200);
+          // ctx.lineTo(200,100);
+          // ctx.lineTo(100,200);
+          // ctx.lineTo(0,140);
+          // ctx.lineTo(140,140);
+          // ctx.lineTo(140,190);
+          
+         // ctx.fillStyle="yellow";
+          //ctx.strokeStyle="green";
+          //ctx.strokeRect(30,62,100,100);
+         
+          //ctx.lineWidth="10";
+         // ctx.strokeStyle="rgba(0,0,255,0.5)";
+          //ctx.fillRect(30,62,100,100);
+          
+
+
+          // ctx.stroke();
+          setInterval(function()
+          {
+              box+=1;
+              ctx.clearRect(0,0,500,500);
+              if(box>500)
+              {
+                  box=-50;
+              }
+            ctx.fillRect(box,62,100,100);
+          },10)
+             
+         })
+    </script>
+   
+</head>
+<body>
+    <canvas width="500" height="500"></canvas>
+</body>
+</html>
