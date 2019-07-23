@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function fuc(){
+            alert(document.getElementsByTagName("h1")[0].innerHTML="3rd loader");
+        }
+        window.addEventListener("load",function(){
+            alert(document.getElementsByTagName("h2")[0].innerHtml="2nd loader");
+        });
+        document.addEventListener("DOMContentLoaded",function(){
+            alert(document.getElementsByTagName("h3")[0].innerHtml="1rd loader");
+        });
+    </script>
+</head>
+<body onload="fuc()">
+    <h1>3rd loader</h1>
+    <h2>2nd loader </h2>
+    <h3>1st loader </h3>
+</body>
+</html>
