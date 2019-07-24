@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            if(navigator.geolocation){
+           // document.getElementById("log").innerHTML="geolocation supportred";
+           navigator.geolocation.getCurrentPosition(successFunction,errorFunction)
+            }
+            else
+            {
+                document.getElementById("log").innerHTML="come to valtech"; 
+            }
+        }
+        function successFunction(pos){
+            console.log(pos);
+           // document.getElementById("log").innerHTML=pos.coords.latitude;
+            document.getElementById("lon").innerHTML=pos.coords.longitude;
+            document.getElementById("latitude").innerHTML=pos.coords.latitude;
+            document.getElementById("log").innerHTML=pos.coords.latitude;
+            document.getElementById("ac").innerHTML=pos.coords.accuracy;
+            document.getElementById("ts").innerHTML=new Date(pos.timestamp);
+        }
+        function errorFunction(error){
+            console.log(error);
+        }
+    </script>
+</head>
+<body>
+    <h1>
+        meassage:<output id="log"></output><br>
+        longitute:<output id="lon"></output><br>
+        latitude:<output id="latitude"></output><br>
+        acurrecy:<output id="ac"></output><br>
+        timestamp:<output id="ts"></output>
+    </h1>
+</body>
+</html>

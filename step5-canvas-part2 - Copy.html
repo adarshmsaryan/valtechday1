@@ -9,15 +9,10 @@
         canvas{
             border: 2px solid green;
         }
-        
     </style>
-    <!--[if lt IE 9]>
-    <script src="lib/canvas.js"></script>
-
-     <![endif]-->
     <script>
         var box=0;
-         window.onload=function(){
+         document.addEventListener("DOMContentLoaded",function(){
              var can=document.getElementsByTagName("canvas")[0];
              var ctx=can.getContext("2d");
            // ctx.font="bold 44px Arial";
@@ -55,16 +50,19 @@
           // ctx.stroke();
           setInterval(function()
           {
-              box+=1;
-              ctx.clearRect(0,0,500,500);
-              if(box>500)
-              {
-                  box=-50;
-              }
-            ctx.fillRect(box,62,100,100);
+              var boxx=Math.round(Math.random()*500);
+              var boxy=Math.round(Math.random()*500);
+              var boxz=Math.round(Math.random()*500);
+              //ctx.clearRect(0,0,500,500);
+              var r=Math.round(Math.random()*255);
+              var g=Math.round(Math.random()*255);
+              var b=Math.round(Math.random()*255);
+              var a=Math.random();
+              ctx.fillStyle="rgb("+r+","+g+","+b+","+a+")";
+              ctx.fillRect(boxx,boxy,boxz,boxz);
           },10)
              
-         }
+         })
     </script>
    
 </head>

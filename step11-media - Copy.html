@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MEdia API</title>
+    <script>
+        window.onload=function(){
+            document.getElementsByTagName("button")[0].addEventListener("click",function(){
+                document.getElementById("vid").play();
+                setInterval(function(){
+                    document.getElementById("log").innerHTML= document.getElementById("vid").currentTime;
+                },100)
+               
+            });
+            document.getElementsByTagName("button")[1].addEventListener("click",function(){
+                document.getElementById("vid").pause();
+            });
+            
+
+        }
+    </script>
+</head>
+<body>
+    <video id="vid">
+        <source src="html5.webm"/>
+
+    </video>
+    <hr>
+    <span id="log"></span>
+    <hr>
+    <button>play</button>
+    <button >pause</button>
+    
+    <button >stop</button>
+    <button>rewind</button>
+</body>
+</html>

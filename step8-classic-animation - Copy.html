@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            canvas{
+                border: 2px solid green;
+                margin: 50px auto;
+                display: block;
+            }
+        </style>
+   <script>
+       var ctx,box=0;
+       document.addEventListener("DOMContentLoaded",function()
+       {
+            ctx=document.querySelector("canvas").getContext("2d");
+            var img=new Image();
+            img.src="horse.jpg";
+            img.addEventListener("load",function(){
+                setInterval(function(){
+                    ctx.drawImage(img,box,0);
+                    box-=200;
+                    if(box<-2200){
+                        box=0;
+                    }
+                },42)
+            })
+       })
+   </script>
+</head>
+<body>
+    <canvas width="200" height="130">
+
+    </canvas>
+</body>
+</html>

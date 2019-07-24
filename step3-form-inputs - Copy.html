@@ -1,0 +1,188 @@
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.addEventListener("load", function(){
+            document.getElementById("textip").addEventListener("change", function(){
+                document.getElementById("textop").innerHTML = document.getElementById("textip").value;
+            });
+            document.getElementById("searchip").addEventListener("change", function(){
+                document.getElementById("searchop").innerHTML = document.getElementById("searchip").value;
+            });
+            document.getElementById("colorip").addEventListener("change", function(){
+                document.getElementById("colorop").innerHTML = document.getElementById("colorip").value;
+            });
+            document.getElementById("timeip").addEventListener("change", function(){
+                document.getElementById("timeop").innerHTML = document.getElementById("timeip").value;
+            });
+            document.getElementById("dateip").addEventListener("change", function(){
+                document.getElementById("dateop").innerHTML = document.getElementById("dateip").value;
+            });
+            document.getElementById("emailip").addEventListener("change", function(){
+                document.getElementById("emailop").innerHTML = document.getElementById("emailip").value;
+            });
+            document.getElementById("datelip").addEventListener("change", function(){
+                document.getElementById("datelop").innerHTML = document.getElementById("datelip").value;
+            });
+            document.getElementById("urlip").addEventListener("change", function(){
+                document.getElementById("urlop").innerHTML = document.getElementById("urlip").value;
+            });
+            document.getElementById("monthip").addEventListener("change", function(){
+                document.getElementById("monthop").innerHTML = document.getElementById("monthip").value;
+            });
+            document.getElementById("datetimeip").addEventListener("change", function(){
+                document.getElementById("datetimeop").innerHTML = document.getElementById("datetimeip").value;
+            });
+            document.getElementById("telip").addEventListener("change", function(){
+                document.getElementById("telop").innerHTML = document.getElementById("telip").value;
+            });
+            document.getElementById("progressip").addEventListener("input", function(){
+                document.getElementById("progressop").value = document.getElementById("progressip").value;
+            });
+            document.getElementById("meterip").addEventListener("input", function(){
+                document.getElementById("meterop").value = document.getElementById("meterip").value;
+            });
+        })
+    </script>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name Of Tag</th>
+                <th>How its rendered by browser</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>text</td>
+                <td>
+                    <input id="textip" type="text">
+                </td>
+                <td>
+                    <output id="textop"></output>
+                </td>
+            </tr>
+            <tr>
+                <td>Search</td>
+                <td>
+                    <input id="searchip" type="search">
+                </td>
+                <td>
+                    <output id="searchop"></output>
+                </td>
+            </tr>
+            <tr>
+                <td>Color</td>
+                <td>
+                    <input id="colorip" type="color">
+                </td>
+                <td>
+                    <output id="colorop"></output>
+                </td>
+            </tr>
+            <tr>
+                    <td>time</td>
+                    <td>
+                        <input id="timeip" type="time">
+                    </td>
+                    <td>
+                        <output id="timeop"></output>
+                    </td>
+                </tr>
+                <tr>
+                        <td>date</td>
+                        <td>
+                            <input id="dateip" type="date">
+                        </td>
+                        <td>
+                            <output id="dateop"></output>
+                        </td>
+                    </tr>
+                    <tr>
+                            <td>email</td>
+                            <td>
+                                <input id="emailip" type="email">
+                            </td>
+                            <td>
+                                <output id="emailop"></output>
+                            </td>
+                        </tr>
+                        <tr>
+                                <td>date-local</td>
+                                <td>
+                                    <input id="datelip" type="datetime-local">
+                                </td>
+                                <td>
+                                    <output id="datelop"></output>
+                                </td>
+                            </tr>
+                            <tr>
+                                    <td>URL</td>
+                                    <td>
+                                        <input id="urlip" type="url">
+                                    </td>
+                                    <td>
+                                        <output id="urlop"></output>
+                                    </td>
+                                </tr>
+                                <tr>
+                                        <td>month</td>
+                                        <td>
+                                            <input id="monthip" type="month">
+                                        </td>
+                                        <td>
+                                            <output id="monthop"></output>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                            <td>datetime</td>
+                                            <td>
+                                                <input id="datetimeip" type="datetime">
+                                            </td>
+                                            <td>
+                                                <output id="datetimeop"></output>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                                <td>teliphone</td>
+                                                <td>
+                                                    <input id="telip" type="tel">
+                                                </td>
+                                                <td>
+                                                    <output id="telop"></output>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                    <td>progress</td>
+                                                    <td>
+                                                        <input id="progressip" type="range" min="0" max="1" step="0.1">
+                                                    </td>
+                                                    <td>
+                                                        <progress value="0.5" id="progressop"></progress>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>meter</td>
+                                                        <td>
+                                                            <input id="meterip" type="range" min="0" max="1" step="0.1">
+                                                        </td>
+                                                        <td>
+                                                            <meter value="0.5" id="meterop"></meter>
+                                                            <meter low="0.2" value="0.5" id="meterop"></meter>
+                                                            <meter high="0.3" value="0.1" id="meterop"></meter>
+                                                            
+                                                            
+                                                        </td>
+                                                    </tr>
+                            
+        </tbody>
+    </table>
+</body>
+</html>
